@@ -1,0 +1,82 @@
+body {
+	font-style: "Aerial", sans-serif;
+}
+
+header {
+	text-align: center;
+}
+
+main {
+	text-align: center;
+}
+
+button {
+	font-size: 1.5rem;
+}
+
+#dice {
+	font-size: 5rem;
+	margin: 0 auto;
+	width: 8rem;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1), 
+       (min--moz-device-pixel-ratio: 1),
+       (min-resolution: 1dppx) {
+    #dice {
+    	width: 10rem;
+    }
+}
+
+.dieLeft {
+	float: left;
+}
+
+.dieRight {
+	float: right;
+}
+
+.die .colorBox {
+	position: relative;
+	width: 0.475em;
+	height: 0.50em;
+	margin: auto;
+	margin-top: -0.85em;
+	z-index: -1;
+	background-color: coral;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1), 
+       (min--moz-device-pixel-ratio: 1),
+       (min-resolution: 1dppx) {
+    .die .colorBox {
+        width: 0.6em;
+        height: 0.625em;
+        margin-top: -0.95em;
+    }
+}
+
+footer {
+	font-weight: bold;
+}
+
+.fixedLeft {
+	position: fixed;
+	width: 5rem;
+	left: 0.5rem;
+	bottom: 0.5rem;
+}
+
+.fixedRight {
+	position: fixed;
+	text-align: right;
+	width: 5rem;
+	right: 0.5rem;
+	bottom: 0.5rem;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
