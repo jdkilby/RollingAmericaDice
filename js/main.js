@@ -9,8 +9,8 @@ $(document).ready(init);
 function init() {
 	var i, tempIndex1, tempIndex2, tempValue, dice = $(".die"), dieRows = $(".dieRow");
 	var colors = ["crimson", "orange", "royalblue", "darkorchid", "green", "yellow", "white"];
-	function COLOR_SHUFFLE_ATTEMPTS() { return 100; }
-	function DICE_REVEAL_SPEED() { return 1500; }
+	var COLOR_SHUFFLE_ATTEMPTS = (function () { return 100; }());
+	var DICE_REVEAL_SPEED = (function () { return 1500; }());
 
 	var resetDice = function() {
 
@@ -18,7 +18,7 @@ function init() {
 			$(this).hide();
 		});
 
-		for ( i = 0; i < COLOR_SHUFFLE_ATTEMPTS(); i ++ ) {
+		for ( i = 0; i < COLOR_SHUFFLE_ATTEMPTS; i ++ ) {
 			tempIndex1 = Math.randomInt(0, colors.length - 1);
 			tempIndex2 = Math.randomInt(0, colors.length - 1);
 			tempValue = colors[tempIndex1];
@@ -40,7 +40,7 @@ function init() {
 		$("#buttonContinue").attr("disabled", "disabled");
 
 		if ( $(dieRows[0]).is(":hidden") ) {
-			$(dieRows[0]).slideDown(DICE_REVEAL_SPEED(), function() {
+			$(dieRows[0]).slideDown(DICE_REVEAL_SPEED, function() {
 				$("#buttonContinue").text("Roll Next Two Dice");
 				$("#buttonContinue").removeAttr("disabled");
 			});	
@@ -48,14 +48,14 @@ function init() {
 		}
 
 		if ( $(dieRows[1]).is(":hidden") ) {
-			$(dieRows[1]).slideDown(DICE_REVEAL_SPEED(), function() {
+			$(dieRows[1]).slideDown(DICE_REVEAL_SPEED, function() {
 				$("#buttonContinue").removeAttr("disabled");
 			});	
 			return;
 		}
 
 		if ( $(dieRows[2]).is(":hidden") ) {
-			$(dieRows[2]).slideDown(DICE_REVEAL_SPEED(), function() {
+			$(dieRows[2]).slideDown(DICE_REVEAL_SPEED, function() {
 				$("#buttonContinue").text("Reset Dice");
 				$("#buttonContinue").removeAttr("disabled");
 			});	
@@ -63,7 +63,7 @@ function init() {
 		}
 
 
-		$("#dice").slideUp(DICE_REVEAL_SPEED(), function() {
+		$("#dice").slideUp(DICE_REVEAL_SPEED, function() {
 			$(dieRows).each(function() {
 				$(this).hide();
 				
