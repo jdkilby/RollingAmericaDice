@@ -20,8 +20,11 @@ button {
 	width: 8rem;
 }
 
-@media (-webkit-min-device-pixel-ratio: 1), 
+@media (max-device-width: 1024px) and 
+       (-webkit-min-device-pixel-ratio: 1),
+       (max-device-width: 1024px) and  
        (min--moz-device-pixel-ratio: 1),
+       (max-device-width: 1024px) and 
        (min-resolution: 1dppx) {
     #dice {
     	width: 10rem;
@@ -46,8 +49,11 @@ button {
 	background-color: coral;
 }
 
-@media (-webkit-min-device-pixel-ratio: 1), 
+@media (max-device-width: 1024px) and 
+       (-webkit-min-device-pixel-ratio: 1),
+       (max-device-width: 1024px) and  
        (min--moz-device-pixel-ratio: 1),
+       (max-device-width: 1024px) and 
        (min-resolution: 1dppx) {
     .die .colorBox {
         width: 0.6em;
