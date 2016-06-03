@@ -33,7 +33,7 @@ function init() {
 			$(dice[i]).children().first().css("backgroundColor", colors[i]);
 		}
 
-		$("#btnContinue").text("Start Round");
+		$("#buttonContinue").text("Start Round");
 	}
 
 	$("#buttonContinue").click(function() {
