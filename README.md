@@ -8,12 +8,5 @@ I built this dice simulator so I can play the game Rolling America without the d
 
 Usage is straightforward: the game's seven dice are randomly rolled, two-at-a-time, until six dice have been rolled. Tap the button at the top (*"Reset Dice"*) to clear the dice and start over.
 
-Feel free to use online or download the files from GitHub to your device and access via its browser. I have tested on a few of the available devices I have:
-
-  - Desktop Browsers (Firefox, Chrome)
-  - HTC One M7 (Firefox, Chrome)
-  - iPad2 (Chrome, Safari)
-
-Please contact me via my website ([jdkilby.com](http://www.jdkilby.com)) if you run into issues on your device.
 
 Enjoy!
